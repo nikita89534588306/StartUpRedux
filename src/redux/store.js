@@ -1,11 +1,12 @@
 import { createStore } from 'redux';
+import {combineReducers} from 'redux';
 
-const store = createStore(reducer);
+import testReducer from './resucers/testReducer';
 
-function value_1(state, action) {
-    switch(action.type) {
-        case ACTION_1: return action.value_1;
-        
-        default: return state;
-    }
-}
+const mainReducer = combineReducers({
+    firstReducer: testReducer 
+});
+const store = createStore(mainReducer);
+
+
+export default store;
