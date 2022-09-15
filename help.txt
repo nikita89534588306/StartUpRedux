@@ -16,11 +16,11 @@ const store = createStore(mainReducer);
         switch(action.type){
             case "INC_FIRST":
             return {
-                ...state, firstParam: state.firstParam + 1
+                ...state, state.firstParam: state.firstParam + 1
             }
             case "ADD_SECOND":
             return {
-                ...state, secondParam: state.secondParam + action.payload
+                ...state, state.secondParam: state.secondParam + action.payload
             }
             default: return state;
         }
